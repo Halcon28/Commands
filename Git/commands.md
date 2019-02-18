@@ -1,5 +1,6 @@
-## Comandos de git
+# Comandos de git
 
+## Comandos Basicos
 Muestra las diferencias entre el ultimo commit y los cambios actuales
 ```
 git diff
@@ -35,6 +36,8 @@ Actualiza el mensaje del ultimo commit
 git commit --amend -m "mensaje nuevo"
 ```
 
+## Viajes en el tiempo
+
 Resetea el ultimo commit manteniendo los cambios actuales(despues se debe de hacer el commit normal)
 ```
 git reset --soft HEAD^
@@ -44,6 +47,8 @@ Resete el proyecto al commit deseado perdiento los cambios mas recientes
 ```
 git reset --hard bfa8d59
 ```
+
+## Renombrar y eliminar archivos
 
 Cambia el nombre a un archivo manteniendo el registro de git
 ```
@@ -67,6 +72,8 @@ Eliminar un archivo sin git
 Primero se elimina sin git y despues se corren los comandos
 git add -u
 ```
+
+## Crear ramificaciones
 
 Crear una nueva rama
 ```
@@ -98,6 +105,8 @@ Eliminar una rama(Buena practica eliminarla cuando ya se hizo el merge)
 git branch -d "nueva-rama"
 ```
 
+## Agregar tags a los commits
+
 Crear un Tag de un commit
 ```
 git tag "tagName"
@@ -122,6 +131,7 @@ Eliminar un tag
 ```
 git tag -d "tagName"
 ```
+## Stash - Guardar los cambios actuales un momento
 
 Git Stash - Mueve todos los cambios despues del ultimo commit a un contenedor temporarl
 ```
