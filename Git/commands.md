@@ -20,6 +20,11 @@ Regresa los cambio al ultimo commit
 git checkout -- "Archivo.ext"
 ```
 
+Muestra todos los commit que han existido aunque ya no esten en el log
+```
+git reflog
+```
+
 Realiza el stage y commit al mismo tiempo
 ```
 git commit -am "mensaje"
@@ -120,7 +125,12 @@ git tag -d "tagName"
 
 Git Stash - Mueve todos los cambios despues del ultimo commit a un contenedor temporarl
 ```
-git stash
+git stash ó git stash save
+```
+
+Git Stash con mensaje para identificarlo
+```
+git stash save "Mensaje del stash"
 ```
 
 Ver los stash pendeintes
@@ -128,7 +138,27 @@ Ver los stash pendeintes
 git stash list
 ```
 
+Ver los stash pendeintes de forma mas detallada
+```
+git show stash
+```
+
+Restaura un stash determinado, si no se especifica uno se tomara el mas reciente
+```
+git stash apply ó git stash apply stash@{1}
+```
+
+Restaura el stash y lo elimina al mismo tiempo
+```
+(git stash apply y git stash drop) ó git stash pop
+```
+
 Elimina el ultimo stash creado
 ```
 git stash drop
+```
+
+Limpia todos los stash que existan
+```
+git stash clear
 ```
