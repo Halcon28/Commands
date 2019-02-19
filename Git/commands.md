@@ -172,3 +172,20 @@ Limpia todos los stash que existan
 ```
 git stash clear
 ```
+
+## Rebase
+
+Mueve los commit mas recientes al punto donde se creeo una rama
+```
+git rebase master
+```
+
+Opciones interactivas para administrar commits
+```
+git rebase -i HEAD~1(# de commit)
+```
+
+Reinicia el proceso de rebase después de haber resuelto un conflicto de merge.
+```
+git rebase --continue
+```
